@@ -3,17 +3,17 @@ from player import *
 import math
 
 
-
+from random import randrange
 class Enemy : 
     def __init__(self, ecran, player):
         self.player = player
         self.ecran = ecran
         self.ecran_largeur = self.ecran.get_width()
         self.ecran_hauteur = self.ecran.get_height()
-        self.pos = [400, 700]
+        self.taille = 20
+        self.pos = [randrange(self.ecran_largeur - self.taille), randrange(self.ecran_hauteur - self.taille)]
         self.vit = 0.1
         self.vivant = 1
-        self.taille = 20
     def deplacement( self, dirx, diry):
             if dirx > 0:
                 if self.pos[0] + dirx*self.vit + self.taille//2 < self.ecran_largeur:

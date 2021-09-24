@@ -7,7 +7,7 @@ class Player :
         self.ecran_largeur = self.ecran.get_width()
         self.ecran_hauteur = self.ecran.get_height()
         self.pos = [400,400]
-        self.vit = 50
+        self.vit = 10
         self.vivant = 1
         self.taille = 20
     def deplacement( self, dirx, diry):
